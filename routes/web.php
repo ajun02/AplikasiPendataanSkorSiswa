@@ -22,7 +22,7 @@ Route::post('/postlogin','LoginController@postlogin');
 Route::get('/logout','LoginController@logout');
 Route::get('/formregister','LoginController@create');
 Route::post('/registerstore','LoginController@store');
-'Auth'::routes();
+Auth::routes();
 
 // Route Kategori
 Route::get('/kategori', 'KategoriController@index')->name('kategori');
@@ -91,3 +91,6 @@ Route::get('/transaksi/detail/{id_transaksi}', 'TransaksiController@detail');
 'Auth'::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+'Auth'::routes();
+

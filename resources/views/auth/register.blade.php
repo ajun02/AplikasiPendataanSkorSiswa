@@ -12,12 +12,12 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="nama" class="col-md-4 col-form-label text-md-right">{{ __('Nama') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="nama" type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-                                @error('nama')
+                                @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -26,12 +26,26 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="notlp" class="col-md-4 col-form-label text-md-right">{{ __('No telepon') }}</label>
+                            <label for="jenkel" class="col-md-4 col-form-label text-md-right">{{ __('Jenis kelamin') }}</label>
 
                             <div class="col-md-6">
-                                <input id="notlp" type="notlp" class="form-control @error('notlp') is-invalid @enderror" name="notlp" value="{{ old('notlp') }}" required autocomplete="notlp">
+                                <input id="jenkel" type="text" class="form-control @error('jenis kelamin') is-invalid @enderror" name="jenkel" value="{{ old('jenkel') }}" required autocomplete="jenkel" autofocus>
 
-                                @error('no telepon')
+                                @error('jenkel')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="notlp" class="col-md-4 col-form-label text-md-right">{{ __('No Telepon') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="notlp" type="text" class="form-control @error('notlp') is-invalid @enderror" name="notlp" value="{{ old('notlp') }}" required autocomplete="name" autofocus>
+
+                                @error('notlp')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -68,6 +82,29 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="" class="col-md-4 col-form-label text-md-right">{{ __('No telepon') }}</label>
+                            <label for="kategori" class="col-md-4 col-form-label text-md-right">Kelas</label>
+                            <div class="col-md-6">
+                                <select class="form-control" name="kategori" id="kategori">
+                                    <option selected>Pilih Kelas</option>
+                                
+                                    <option value="kesiswaan">Kesiswaan</option>
+                                    <option value="guru_piket">Guru Piket</option>
+                                    <option value="guru_bk">Guru BK</option>
+                                </select>
 
-              
+                            </div>
+                            
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Register') }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

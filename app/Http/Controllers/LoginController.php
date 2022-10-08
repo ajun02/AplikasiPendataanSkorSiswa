@@ -15,9 +15,9 @@ class LoginController extends Controller
 
     public function postlogin(Request $Request)
     {
-        if('Auth'::attempt('$request'->only('email','password'))){
+        if('Auth'::attempt($request->only('email','password'))){
             return redirect('/');
-        }
+    }
         return redirect('/login');
     }
 
