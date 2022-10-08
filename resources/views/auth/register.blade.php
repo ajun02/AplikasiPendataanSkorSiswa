@@ -82,11 +82,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="kategori" class="col-md-4 col-form-label text-md-right">Kelas</label>
+                            <label for="kategori" class="col-md-4 col-form-label text-md-right">Kategori</label>
                             <div class="col-md-6">
                                 <select class="form-control" name="kategori" id="kategori">
-                                    <option selected>Pilih Kelas</option>
-                                
+                                    <option selected>Pilih Kategori</option>
                                     <option value="kesiswaan">Kesiswaan</option>
                                     <option value="guru_piket">Guru Piket</option>
                                     <option value="guru_bk">Guru BK</option>
